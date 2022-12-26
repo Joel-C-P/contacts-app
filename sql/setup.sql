@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS conctacts_app;
+DROP DATABASE IF EXISTS contacts_app;
 
-CREATE DATABASE conctacts_app;
+CREATE DATABASE contacts_app;
 
-USE conctacts_app;
+USE contacts_app;
 
 CREATE TABLE contacts (
     id INT AUTO_INCREMENT PRIMARY KEY,
