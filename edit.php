@@ -40,7 +40,11 @@ $contact = $statement->fetch(PDO::FETCH_ASSOC);
         ":phone_number" => $_POST["phone_number"],
       ]);
 
+      $_SESSION["flash"] = ["message" => "Contact {$_POST["name"]} updated."];
+
       header("Location: home.php");
+      
+      reeturn;
     }
     
   }
