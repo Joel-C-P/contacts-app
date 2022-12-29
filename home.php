@@ -2,7 +2,14 @@
 
 require "database.php";
 
-$contacts = $conn->query("SELECT * FROM contacts");
+session_start();
+
+if(!isset($_SESSION["user"])) {
+  header("Location: login.php");
+  return;
+}
+
+$contacts = $conn->query("SELECT * FROM contacts WHERE user_id = {$_SESSION["user"]["id"]}");
 
 
 ?>
